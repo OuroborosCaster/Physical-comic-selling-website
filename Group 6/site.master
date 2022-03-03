@@ -1,0 +1,111 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="site.master.cs" Inherits="site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Comic site</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-color: transparent">
+    <form id="form1" runat="server">
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <table style="width:100%">
+                            <tr>
+                                <td>
+                                    <img width="400" src="img/banner.jpg" />
+                                </td>
+                                <td>
+                                    <asp:PlaceHolder ID="notLog" runat="server">
+                                        <table style="float:right; text-align:right;">
+                                        <tr>
+                                            <td>
+                                                <asp:Label ID="lblReg" runat="server" Text="New user?Pls "></asp:Label>
+                                            </td>
+                                            <td>
+                                                <asp:Button ID="btnReg"
+                                                    runat="server"
+                                                    Text="Register"
+                                                    Font-Size="10pt"
+                                                    Width="100px"
+                                                    BackColor="Transparent" OnClick="btnReg_Click" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <asp:Label ID="lblLog" runat="server" Text="Already have account?Pls "></asp:Label></td>
+                                            <td>&nbsp;<asp:Button ID="btnLog"
+                                                runat="server"
+                                                Text="Login"
+                                                Font-Size="10pt"
+                                                Width="100px"
+                                                BackColor="Transparent" OnClick="btnLog_Click" /></td>
+                                        </tr>
+                                    </table></asp:PlaceHolder>
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>A physical comic selling website</td>
+                                <td>
+                                    <asp:Label ID="lblHi" runat="server" Visible="false"></asp:Label><asp:Button Visible="false" ID="btnLogout" runat="server" Text="Log out" OnClick="btnLogout_Click" /></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table cellspacing="5">
+                            <tr style="background-color: #3771bb; opacity: 0.6">
+                                <td>
+                                    <asp:Button ID="btnHome"
+                                        runat="server"
+                                        Text="Home"
+                                        Font-Bold="true"
+                                        Font-Size="16pt"
+                                        ForeColor="WhiteSmoke"
+                                        Width="300px"
+                                        BackColor="Transparent" OnClick="btnHome_Click" />
+                                </td>
+                                <td>
+                                    <asp:Button ID="btnCart"
+                                        runat="server"
+                                        Text="My Cart"
+                                        Font-Bold="true"
+                                        Font-Size="16pt"
+                                        ForeColor="WhiteSmoke"
+                                        Width="300px"
+                                        BackColor="Transparent" OnClick="btnCart_Click" /></td>
+                                <td>
+                                    <asp:Button ID="btnAccount" runat="server" Text="My Account" Font-Bold="true"
+                                        Font-Size="16pt"
+                                        ForeColor="WhiteSmoke"
+                                        Width="300px"
+                                        BackColor="Transparent" OnClick="btnAccount_Click" /></td>
+                                <td>
+                                    <asp:Button ID="btnAdmin" runat="server" Text="Management" Font-Bold="true"
+                                        Font-Size="16pt"
+                                        ForeColor="WhiteSmoke"
+                                        Width="300px"
+                                        BackColor="Transparent" OnClick="btnAdmin_Click" Visible="false" /></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+    &copy;All copyright reserved 2020, Group 6
+</body>
+</html>
